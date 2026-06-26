@@ -1,0 +1,357 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Community Connect Portal</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+
+        nav a {
+            text-decoration: none;
+            margin-right: 15px;
+        }
+
+        #welcomeBanner {
+            background-color: navy;
+            color: white;
+            padding: 15px;
+            border-radius: 10px;
+        }
+
+        .highlight {
+            background-color: lightgreen;
+            padding: 5px;
+        }
+
+        .gallery {
+            border: 3px solid black;
+            border-radius: 8px;
+        }
+
+        table {
+            margin-top: 20px;
+            border-collapse: collapse;
+        }
+
+        td {
+            padding: 10px;
+            text-align: center;
+        }
+
+        form {
+            width: 450px;
+            border: 1px solid gray;
+            padding: 20px;
+            margin-top: 20px;
+            border-radius: 10px;
+        }
+
+        input,
+        select,
+        textarea {
+            width: 100%;
+            padding: 8px;
+            margin-top: 5px;
+            margin-bottom: 10px;
+        }
+
+        button {
+            padding: 8px 15px;
+            background-color: navy;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        output {
+            color: green;
+            font-weight: bold;
+        }
+    </style>
+
+    <script>
+
+   function findLocation() {
+
+    if (navigator.geolocation) {
+
+        navigator.geolocation.getCurrentPosition(
+            showPosition,
+            showError,
+            {
+                enableHighAccuracy: true,
+                timeout: 5000,
+                maximumAge: 0
+            }
+        );
+
+    } else {
+
+        document.getElementById("location").innerHTML =
+            "Geolocation is not supported by this browser.";
+    }
+}
+
+function showPosition(position) {
+
+    document.getElementById("location").innerHTML =
+        "<b>Latitude:</b> " +
+        position.coords.latitude +
+        "<br><b>Longitude:</b> " +
+        position.coords.longitude;
+}
+
+function showError(error) {
+
+    switch (error.code) {
+
+        case error.PERMISSION_DENIED:
+            document.getElementById("location").innerHTML =
+                "Location access denied by user.";
+            break;
+
+        case error.POSITION_UNAVAILABLE:
+            document.getElementById("location").innerHTML =
+                "Location information unavailable.";
+            break;
+
+        case error.TIMEOUT:
+            document.getElementById("location").innerHTML =
+                "Location request timed out.";
+            break;
+
+        default:
+            document.getElementById("location").innerHTML =
+                "Unknown error occurred.";
+    }
+}
+</script>
+</head>
+
+<body>
+
+    <!-- Navigation -->
+
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#events">Events</a>
+        <a href="#contact">Contact</a>
+        <a href="help.html" target="_blank">Help</a>
+    </nav>
+
+    <!-- Main Content -->
+
+    <div id="welcomeBanner">
+        Welcome Resident!
+
+        <span style="color:orange;font-weight:bold;">
+            Early Registration Discount Available
+        </span>
+    </div>
+
+    <br>
+
+    <p class="highlight">
+        Register now and participate in exciting community programs.
+    </p>
+
+    <section id="home">
+        <h2>Home</h2>
+        <p>Welcome to the Community Portal.</p>
+    </section>
+
+    <section id="events">
+        <h2>Events</h2>
+        <p>Explore local community activities.</p>
+    </section>
+
+    <section id="contact">
+        <h2>Contact</h2>
+        <p>Email: community@gmail.com</p>
+    </section>
+
+    <h2>Community Event Gallery</h2>
+
+    <table border="1">
+
+        <tr>
+            <td>
+                <img src="https://images.tribuneindia.com/cms/gall_content/2019/4/2019_4$largeimg05_Friday_2019_070059151.jpg"
+                    width="180"
+                    class="gallery"
+                    ondblclick="enlargeImage(this)"
+                    alt="Yoga Camp"
+                    title="Yoga Camp">
+                <p>Morning Yoga Camp</p>
+            </td>
+
+            <td>
+                <img src="https://static.vecteezy.com/system/resources/thumbnails/070/862/560/small/vibrant-food-truck-festival-scene-with-crowds-and-smoke-photo.jpg"
+                    width="180"
+                    class="gallery"
+                    ondblclick="enlargeImage(this)"
+                    alt="Food Festival"
+                    title="Food Festival">
+                <p>Food Festival</p>
+            </td>
+
+            <td>
+                <img src="https://c8.alamy.com/comp/2WC65JW/book-readers-browsing-books-at-a-stall-during-assam-book-fair-in-guwahati-assam-india-on-29-december-2023-2WC65JW.jpg"
+                    width="180"
+                    class="gallery"
+                    ondblclick="enlargeImage(this)"
+                    alt="Book Fair"
+                    title="Book Fair">
+                <p>Book Fair</p>
+            </td>
+        </tr>
+
+        <tr>
+            <td>
+                <img src="https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcQ4ouMrbbcot-YYEHLQ0ZNc13s_bkQrWkjvAasjXe2wUBIoziXB"
+                    width="180"
+                    class="gallery"
+                    ondblclick="enlargeImage(this)"
+                    alt="Tree Plantation"
+                    title="Tree Plantation">
+                <p>Tree Plantation Drive</p>
+            </td>
+
+            <td>
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQeX78dMLfjsGOCIOCc7z0KVf-M9kRAh-PmHr8UcdOLBPcxzHileRYQRo-Q&s=10"
+                    width="180"
+                    class="gallery"
+                    ondblclick="enlargeImage(this)"
+                    alt="Marathon"
+                    title="Marathon">
+                <p>Community Marathon</p>
+            </td>
+
+            <td>
+                <img src="https://www.agakhanacademies.org/sites/academics/files/styles/large/public/Hyd20181120%20cultural%20night%202.jpg?itok=H9ZHSUKE"
+                    width="180"
+                    class="gallery"
+                    ondblclick="enlargeImage(this)"
+                    alt="Cultural Night"
+                    title="Cultural Night">
+                <p>Cultural Night</p>
+            </td>
+        </tr>
+
+    </table>
+
+    
+
+    <h2>Event Registration Form</h2>
+
+    <form>
+
+        <label>Name</label>
+        <input type="text"
+            placeholder="Enter your full name"
+            required
+            autofocus>
+
+        <label>Email</label>
+        <input type="email"
+            placeholder="Enter your email"
+            required>
+
+        <label>Event Date</label>
+        <input type="date"
+            required>
+
+        <label>Event Type</label>
+
+        <select id="eventType"
+        onchange="showFee(this.value)">
+
+            <option value="">Select Event</option>
+            <option value="100">Yoga Camp</option>
+            <option value="150">Food Festival</option>
+            <option value="200">Book Fair</option>
+            <option value="250">Tree Plantation Drive</option>
+            <option value="300">Community Marathon</option>
+            <option value="350">Cultural Night</option>
+
+        </select>
+
+        <p id="fee"></p>
+
+        <label>Phone Number</label>
+
+        <input type="text"
+            id="phone"
+            placeholder="Enter phone number"
+            onblur="validatePhone()">
+
+        <label>Feedback Message</label>
+
+        <textarea rows="4"
+            placeholder="Enter your feedback"
+            onkeyup="countCharacters(this)">
+        </textarea>
+
+        <p>
+            Characters Typed :
+            <span id="charCount">0</span>
+        </p>
+
+        <button type="button"
+            onclick="registerEvent()">
+            Register
+        </button>
+
+        <br><br>
+<br><br>
+
+<button type="button"
+        onclick="savePreference()">
+    Save Preference
+</button>
+
+<button type="button"
+        onclick="clearPreferences()">
+    Clear Preferences
+</button>
+        <output id="result"></output>
+
+    </form>
+    <h2>Event Promo Video</h2>
+
+<video width="500"
+       controls
+       oncanplay="videoReady()">
+
+    <source src="mov_bbb (2).mp4" type="video/mp4">
+
+    Your browser does not support the video tag.
+
+</video>
+
+<p id="videoMsg"></p>
+<h2>Find Nearby Events</h2>
+
+<button type="button"
+        onclick="findLocation()">
+    Find Nearby Events
+</button>
+
+<p id="location"></p>
+    <!-- Footer -->
+
+    <footer>
+        <p>© 2026 Community Connect Portal</p>
+    </footer>
+
+</body>
+
+</html>
+```
