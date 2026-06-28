@@ -1,0 +1,626 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Community Connect Portal</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <!-- External CSS -->
+    <link rel="stylesheet" href="styles.css">
+    <!-- Internal CSS -->
+    <style>
+
+        body{
+            background-color:#f2f8fc;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+
+<ul class="navMenu">
+
+    <li><a href="#home">Home</a></li>
+
+    <li><a href="#events">Events</a></li>
+
+    <li><a href="#contact">Contact</a></li>
+
+    <li><a href="help.html" target="_blank">Help</a></li>
+
+</ul>
+
+</nav>
+
+    <!-- Main -->
+
+   <div id="mainHeader">
+
+        <h1 style="color:red;">
+            Community Connect Portal
+        </h1>
+
+        <span style="color:orange;font-weight:bold;">
+            Register today and get exciting offers!
+        </span>
+
+    </div>
+
+    <p class="highlight">
+        Welcome to the Local Community Event Portal.
+    </p>
+
+    <section id="home">
+
+    <h2>Home</h2>
+
+    <div class="eventCard">
+
+        <h3>Community Services</h3>
+
+      <p>
+
+Join our community events and enjoy learning, health activities,
+sports competitions, cultural programs, and many exciting experiences
+organized by the city council throughout the year.
+
+</p>
+        <p style="color:#cc0000;">
+    Community activities help build stronger neighborhoods.
+</p>
+
+        <button class="cta-button">
+            Register Now
+        </button>
+
+    </div>
+
+</section>
+
+    <section id="events">
+
+    <h2>Events</h2>
+
+    <div class="eventCard">
+
+        <h3>Upcoming Events</h3>
+
+        <p>
+            Yoga Camp, Book Fair, Marathon,
+            Food Festival and Cultural Night.
+        </p>
+
+    </div>
+
+</section>
+<h2>Upcoming Activities</h2>
+
+<ul class="activityList">
+
+    <li>Yoga Camp</li>
+
+    <li>Book Fair</li>
+
+    <li>Food Festival</li>
+
+    <li>Community Marathon</li>
+
+    <li>Cultural Night</li>
+
+</ul>
+<!-- Community Event Gallery -->
+
+<h2>Community Event Gallery</h2>
+
+<table class="eventGallery">
+
+    <tr>
+
+        <td>
+            <img src="https://images.tribuneindia.com/cms/gall_content/2019/4/2019_4$largeimg05_Friday_2019_070059151.jpg"
+                 width="180"
+                 class="gallery"
+                 alt="Yoga Camp"
+                 title="Yoga Camp">
+
+            <p>Yoga Camp</p>
+        </td>
+
+        <td>
+            <img src="https://static.vecteezy.com/system/resources/thumbnails/070/862/560/small/vibrant-food-truck-festival-scene-with-crowds-and-smoke-photo.jpg"
+                 width="180"
+                 class="gallery"
+                 alt="Food Festival"
+                 title="Food Festival">
+
+            <p>Food Festival</p>
+        </td>
+
+        <td>
+            <img src="https://c8.alamy.com/comp/2WC65JW/book-readers-browsing-books-at-a-stall-during-assam-book-fair-in-guwahati-assam-india-on-29-december-2023-2WC65JW.jpg"
+                 width="180"
+                 class="gallery"
+                 alt="Book Fair"
+                 title="Book Fair">
+
+            <p>Book Fair</p>
+        </td>
+
+    </tr>
+
+    <tr>
+
+        <td>
+            <img src="https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcQ4ouMrbbcot-YYEHLQ0ZNc13s_bkQrWkjvAasjXe2wUBIoziXB"
+                 width="180"
+                 class="gallery"
+                 alt="Tree Plantation"
+                 title="Tree Plantation">
+
+            <p>Tree Plantation </p>
+        </td>
+
+        <td>
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQeX78dMLfjsGOCIOCc7z0KVf-M9kRAh-PmHr8UcdOLBPcxzHileRYQRo-Q&s=10"
+                 width="180"
+                 class="gallery"
+                 alt="Community Marathon"
+                 title="Community Marathon">
+
+            <p>Community Marathon</p>
+        </td>
+
+        <td>
+            <img src="https://www.agakhanacademies.org/sites/academics/files/styles/large/public/Hyd20181120%20cultural%20night%202.jpg?itok=H9ZHSUKE"
+                 width="180"
+                 class="gallery"
+                 alt="Cultural Night"
+                 title="Cultural Night">
+
+            <p>Cultural Night</p>
+        </td>
+
+    </tr>
+
+</table>
+<!-- JavaScript Demo -->
+
+<h2>JavaScript Demo</h2>
+
+<div class="eventCard">
+
+    <h3>JavaScript Status</h3>
+
+    <p>
+        Open the browser Console (F12) to view the welcome message.
+    </p>
+
+    <p>
+        When the page loads, an alert box will also appear.
+    </p>
+
+</div>
+<!-- JavaScript Event Information -->
+
+<h2>JavaScript Event Information</h2>
+
+<div class="eventCard">
+
+    <h3 id="eventDetails"></h3>
+
+    <p id="seatCount"></p>
+
+    <button id="registerBtn" class="cta-button">
+        Register for Event
+    </button>
+
+</div>
+<!-- Event List -->
+
+<h2>Available Community Events</h2>
+
+<div id="eventList"></div>
+<!-- Task 4 -->
+
+<h2>Event Functions Demo</h2>
+
+<div class="eventCard">
+
+    <button onclick="addEvent()">
+        Add Event
+    </button>
+
+    <button onclick="registerUser('Yoga')">
+        Register Yoga
+    </button>
+
+    <button onclick="showMusicEvents()">
+        Show Music Events
+    </button>
+
+    <p id="task4Output"></p>
+
+</div>
+<!-- Task 5 -->
+
+<h2>Objects and Prototypes</h2>
+
+<div class="eventCard">
+
+    <button onclick="showEventObject()">
+        Show Event Details
+    </button>
+
+    <button onclick="showKeysValues()">
+        Show Object Entries
+    </button>
+
+    <p id="task5Output"></p>
+
+</div>
+<!-- Task 6 -->
+
+<h2>events</h2>
+
+<div class="eventCard">
+
+    <button onclick="addNewEvent()">
+        Add New Event
+    </button>
+
+    <button onclick="showMusicOnly()">
+        Show Music Events
+    </button>
+
+    <button onclick="showFormattedEvents()">
+        Show Formatted Events
+    </button>
+
+    <p id="task6Output"></p>
+
+</div>
+<!-- Task 7 -->
+
+<h2><h2>Upcoming Community Events</h2></h2>
+
+<div class="eventCard">
+
+    <button onclick="showEventCards()">
+        Display Events
+    </button>
+
+    <button onclick="registerEventDOM()">
+        Register
+    </button>
+
+    <button onclick="cancelRegistration()">
+        Cancel Registration
+    </button>
+
+    <div id="domEvents"></div>
+
+</div>
+<!-- Task 8 -->
+
+<h2>Event Registration & Search</h2>
+
+<div class="eventCard">
+
+    <label>Select Event</label>
+
+    <select id="categorySelect" onchange="filterCategory()">
+
+        <option value="All">All Events</option>
+        <option value="Health">Health</option>
+        <option value="Music">Music</option>
+        <option value="Education">Education</option>
+
+    </select>
+
+    <br><br>
+
+    <label>Search Event</label>
+
+    <input type="text"
+           id="searchBox"
+           placeholder="Type event name..."
+           onkeydown="searchEvent()">
+
+    <br><br>
+
+    <button onclick="registerNow()">
+        Register
+    </button>
+
+    <p id="task8Output"></p>
+
+</div>
+<!-- Task 9 -->
+
+<h2>Latest Community Events</h2>
+
+<div class="eventCard">
+
+    <button onclick="loadEvents()">
+        Load Events (.then)
+    </button>
+
+    <button onclick="loadEventsAsync()">
+        Load Events (Async/Await)
+    </button>
+
+    <p id="loading"></p>
+
+    <div id="task9Output"></div>
+
+</div>
+<!-- Task 10 -->
+
+<h2>Modern JavaScript Features</h2>
+
+<div class="eventCard">
+
+    <button onclick="showEventDetails()">
+        Show Event Details
+    </button>
+
+    <button onclick="cloneEventList()">
+        Clone Event List
+    </button>
+
+    <p id="task10Output"></p>
+
+</div>
+<!-- Task 11 -->
+
+<h2>Community Event Registration</h2>
+
+<div class="eventCard">
+
+<form id="registrationForm">
+
+    <label>Name</label><br>
+
+    <input type="text" name="username">
+
+    <br>
+
+    <span id="nameError" style="color:red;"></span>
+
+    <br><br>
+
+    <label>Email</label><br>
+
+    <input type="email" name="email">
+
+    <br>
+
+    <span id="emailError" style="color:red;"></span>
+
+    <br><br>
+
+    <label>Select Event</label><br>
+
+    <select name="eventName">
+
+        <option value="">Select Event</option>
+
+        <option>Yoga Camp</option>
+
+        <option>Music Night</option>
+
+        <option>Book Fair</option>
+
+    </select>
+
+    <br>
+
+    <span id="eventError" style="color:red;"></span>
+
+    <br><br>
+
+    <button type="submit">
+        Register
+    </button>
+
+</form>
+
+<br>
+
+<p id="task11Output"></p>
+
+</div>
+<!-- Task 12 -->
+
+<h2>Submit Registration</h2>
+
+<div class="eventCard">
+
+    <button onclick="submitRegistration()">
+        Submit Registration
+    </button>
+
+    <p id="task12Output"></p>
+
+</div>
+<!-- Task 13 -->
+
+<h2>Debug Registration</h2>
+
+<div class="eventCard">
+
+    <button onclick="debugRegistration()">
+        Debug Registration
+    </button>
+
+    <p id="task13Output"></p>
+
+</div>
+<!-- Task 14 -->
+
+<h2>jQuery Demo</h2>
+
+<div class="eventCard">
+
+    <button id="registerBtnJQ">
+        Register with jQuery
+    </button>
+
+    <br><br>
+
+    <button id="showCard">
+        Fade In
+    </button>
+
+    <button id="hideCard">
+        Fade Out
+    </button>
+
+    <br><br>
+
+    <div id="jqCard"
+         style="background:#d9f5d9;padding:15px;border:1px solid green;">
+
+        Community Event Registration Successful!
+
+    </div>
+
+    <br>
+
+    <p>
+        <b>Benefit of React/Vue:</b><br>
+        React and Vue make it easier to build fast, reusable, and interactive web applications.
+    </p>
+
+</div>
+<!-- Event Schedule Table -->
+
+<h2>Community Event Schedule</h2>
+
+<table class="eventTable">
+
+    <tr>
+        <th>Event Name</th>
+        <th>Date</th>
+        <th>Venue</th>
+    </tr>
+
+    <tr>
+        <td>Yoga Camp</td>
+        <td>10 July 2026</td>
+        <td>Community Hall</td>
+    </tr>
+
+    <tr>
+        <td>Food Festival</td>
+        <td>18 July 2026</td>
+        <td>City Park</td>
+    </tr>
+
+    <tr>
+        <td>Book Fair</td>
+        <td>25 July 2026</td>
+        <td>Public Library</td>
+    </tr>
+
+    <tr>
+        <td>Community Marathon</td>
+        <td>2 August 2026</td>
+        <td>Central Stadium</td>
+    </tr>
+
+    <tr>
+        <td>Cultural Night</td>
+        <td>12 August 2026</td>
+        <td>Town Hall</td>
+    </tr>
+
+</table>
+<h2>Community Notice</h2>
+
+<div class="eventCard">
+
+    <h3>Community Awareness Program</h3>
+
+    <p>
+    
+    </p>
+
+</div>
+
+<br>
+
+<input type="text"
+       class="highlightField"
+       placeholder="Click here to see the outline">
+
+<br><br>
+
+<p class="hiddenText">
+    This paragraph uses visibility: hidden.
+</p>
+
+<p class="removedText">
+    This paragraph uses display: none.
+</p>
+<!-- Community News -->
+
+<h2>Community News</h2>
+
+<div class="newsSection">
+
+    <p>
+
+        The Local Community Council is organizing several exciting
+        activities throughout the year to encourage social
+        participation and improve community well-being. Residents can
+        take part in yoga camps, cultural nights, food festivals,
+        sports competitions, tree plantation drives, health awareness
+        programs, educational workshops, and volunteer activities.
+
+        These programs are designed to bring together people of all
+        age groups, promote healthy lifestyles, develop leadership
+        skills, encourage environmental awareness, and strengthen
+        neighborhood relationships. Citizens are encouraged to
+        register early and actively participate in these community
+        events for a better and healthier future.
+
+    </p>
+
+</div>
+    <section id="contact">
+
+    <h2>Contact</h2>
+
+    <div class="eventCard">
+
+        <h3>Contact Information</h3>
+
+        <p>
+            Email : community@gmail.com
+        </p>
+
+    </div>
+
+</section>
+
+    <!-- Footer -->
+
+    <footer>
+
+        <p>
+            © 2026 Community Connect Portal
+        </p>
+
+    </footer>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
+<script src="main.js"></script>
+
+</body>
+
+</html>

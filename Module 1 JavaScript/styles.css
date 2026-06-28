@@ -1,0 +1,379 @@
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+
+
+
+body{
+
+    font-family:'Poppins',sans-serif;
+
+    background-color:#e6f2ff;
+
+    background-image:url("https://images.rawpixel.com/image_800/czNmcy1wcml2YXRlL3Jhd3BpeGVsX2ltYWdlcy93ZWJzaXRlX2NvbnRlbnQvbHIvdjU0NmJhdGNoMy1teW50LTM0LWJhZGdld2F0ZXJjb2xvcl8xLmpwZw.jpg");
+
+    background-size:cover;
+
+    background-repeat:no-repeat;
+
+    background-attachment:fixed;
+
+    margin:0;
+
+    padding:20px;
+
+}
+
+/* ===================================
+   Navigation Menu
+=================================== */
+
+.navMenu{
+
+    list-style:none;
+
+    display:flex;
+
+    gap:20px;
+
+    padding:0;
+
+    margin-bottom:25px;
+
+}
+
+.navMenu li{
+
+    padding:8px;
+
+}
+/* ===================================
+   Link Styling
+=================================== */
+
+a:link{
+
+    color:navy;
+
+    text-decoration:none;
+
+}
+
+a:visited{
+
+    color:purple;
+
+}
+
+a:hover{
+
+    color:white;
+
+    background:#0066cc;
+
+    padding:6px;
+
+    border-radius:5px;
+
+}
+
+a:active{
+
+    color:red;
+
+}
+/* ===================================
+   Activity List
+=================================== */
+
+.activityList{
+
+    list-style-type:square;
+
+    list-style-position:inside;
+
+    margin-top:20px;
+
+}
+
+.activityList li{
+
+    padding:10px;
+
+    margin:8px 0;
+
+    background:#f0f8ff;
+
+    border-left:4px solid #0066cc;
+
+}
+
+/* =====================================
+   TABLE STYLING
+===================================== */
+
+.eventTable{
+
+    width:100%;
+
+    border-collapse:collapse;
+
+    margin-top:20px;
+
+}
+
+/* Table Heading */
+
+.eventTable th{
+
+    background:#003366;
+
+    color:white;
+
+    padding:15px;
+
+    border:1px solid gray;
+
+    text-align:center;
+
+}
+
+/* Table Data */
+
+.eventTable td{
+
+    padding:15px;
+
+    border:1px solid gray;
+
+    text-align:center;
+
+}
+
+/* Zebra Striping */
+
+.eventTable tr:nth-child(even){
+
+    background:#eaf4ff;
+
+}
+
+/* Hover Effect */
+
+.eventTable tr:hover{
+
+    background:#d6ecff;
+
+}
+
+/* ===============================
+   HEADER
+================================ */
+
+#mainHeader{
+
+    background:linear-gradient(to right,#003366,#3399ff);
+
+    color:white;
+
+    padding:25px;
+
+    border-radius:10px;
+
+    text-align:center;
+
+}
+
+
+.highlight{
+
+    background:lightgreen;
+
+    padding:10px;
+
+    margin:20px 0;
+
+}
+
+
+
+
+
+
+h2{
+
+    background:linear-gradient(to right,#0066cc,#66ccff);
+
+    color:white;
+
+    padding:12px;
+
+    border-radius:5px;
+
+    font-size:32px;
+
+    font-weight:700;
+
+    text-transform:uppercase;
+
+    letter-spacing:2px;
+
+}
+
+
+.eventCard {
+
+    background: rgba(255,255,255,0.90);
+
+    border: 2px solid #0066cc;
+
+    padding: 20px;
+
+    margin-bottom: 20px;
+
+    border-radius: 10px;
+
+}
+
+
+/* ===============================
+   TEXT STYLING
+================================ */
+
+h3{
+
+    font-size:24px;
+
+    font-style:italic;
+
+    font-weight:600;
+
+    color:#003366;
+
+}
+
+p{
+
+    font-size:18px;
+
+    line-height:1.8;
+
+    text-align:justify;
+
+    letter-spacing:1px;
+
+}
+
+
+.cta-button{
+
+    background:#007BFF;
+
+    color:white;
+
+    border:none;
+
+    padding:10px 18px;
+
+    border-radius:5px;
+
+    cursor:pointer;
+
+}
+
+.cta-button:hover{
+
+    background:#0056b3;
+
+}
+
+/* ===============================
+   Task 8 : Box Model
+================================ */
+
+/* Event Card */
+
+.eventCard{
+
+    border:3px solid navy;
+
+    padding:20px;
+
+    margin:25px 0;
+
+    outline:2px dashed orange;
+
+    border-radius:10px;
+
+}
+
+/* Input Outline */
+
+.highlightField:focus{
+
+    outline:3px solid red;
+
+}
+
+/* Visibility */
+
+.hiddenText{
+
+    visibility:hidden;
+
+}
+
+/* Display */
+
+.removedText{
+
+    display:none;
+
+}
+
+/* ==================================
+   Task 9 : Multiple Columns
+================================== */
+
+.newsSection{
+
+    column-count:2;
+
+    column-gap:30px;
+
+    column-rule:1px solid gray;
+
+    text-align:justify;
+
+    margin-top:20px;
+
+    padding:20px;
+
+    border:2px solid #cccccc;
+
+    background:#fafafa;
+
+}
+/* ===============================
+   FOOTER
+================================ */
+
+footer{
+
+    background:#003366;
+
+    color:white;
+
+    text-align:center;
+
+    font-size:18px;
+
+    padding:20px;
+
+    margin-top:40px;
+
+}
