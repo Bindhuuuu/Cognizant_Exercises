@@ -1,30 +1,17 @@
 import java.util.Scanner;
-
 public class TryCatchExample {
-
     public static void main(String[] args) {
-
         Scanner sc = new Scanner(System.in);
-
+        System.out.print("Enter first integer: ");
+        int num1 = sc.nextInt();
+        System.out.print("Enter second integer: ");
+        int num2 = sc.nextInt();
         try {
-
-            System.out.print("Enter first number: ");
-            int a = sc.nextInt();
-
-            System.out.print("Enter second number: ");
-            int b = sc.nextInt();
-
-            int result = a / b;
-
+            int result = num1 / num2;
             System.out.println("Result = " + result);
-
         } catch (ArithmeticException e) {
-
-            System.out.println("Cannot divide by zero!");
-
-        } finally {
-
-            sc.close();
+            System.out.println("Error: Division by zero is not allowed.");
         }
+        sc.close();
     }
 }

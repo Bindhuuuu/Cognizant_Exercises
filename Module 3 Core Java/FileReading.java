@@ -3,24 +3,20 @@ import java.io.FileNotFoundException;
 import java.util.Scanner;
 
 public class FileReading {
-
     public static void main(String[] args) {
-
         try {
-
             File file = new File("output.txt");
-            Scanner reader = new Scanner(file);
+            Scanner sc = new Scanner(file);
 
-            while (reader.hasNextLine()) {
-                System.out.println(reader.nextLine());
+            System.out.println("Contents of output.txt:");
+
+            while (sc.hasNextLine()) {
+                System.out.println(sc.nextLine());
             }
 
-            reader.close();
-
+            sc.close();
         } catch (FileNotFoundException e) {
-
             System.out.println("File not found.");
-
         }
     }
 }
