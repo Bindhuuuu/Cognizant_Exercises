@@ -1,0 +1,378 @@
+/* SkillGap AI - Custom Streamlit Styles */
+/* Modern dark theme with glassmorphism effects */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+
+/* ── Root Variables ───────────────────────────────────────────── */
+:root {
+    --primary: #667EEA;
+    --secondary: #764BA2;
+    --success: #00CC88;
+    --warning: #FFA500;
+    --danger: #FF6B6B;
+    --info: #00C9FF;
+    --dark: #0F0F1A;
+    --card: rgba(42, 42, 62, 0.85);
+    --text: #E2E8F0;
+    --text-muted: #94A3B8;
+    --border: rgba(102, 126, 234, 0.25);
+    --glow: rgba(102, 126, 234, 0.4);
+}
+
+/* ── Global Reset ─────────────────────────────────────────────── */
+.main {
+    background: linear-gradient(135deg, #0F0F1A 0%, #1A1A2E 50%, #16213E 100%) !important;
+    font-family: 'Inter', sans-serif !important;
+}
+
+/* ── Hide Streamlit Branding ──────────────────────────────────── */
+#MainMenu { visibility: hidden; }
+footer { visibility: hidden; }
+.stDeployButton { display: none; }
+
+/* ── Sidebar ──────────────────────────────────────────────────── */
+[data-testid="stSidebar"] {
+    background: linear-gradient(180deg, #0F0F1A 0%, #1A1A2E 100%) !important;
+    border-right: 1px solid var(--border) !important;
+}
+
+[data-testid="stSidebar"] .stRadio > div {
+    gap: 0.4rem;
+}
+
+/* Navigation label text — bright and readable */
+[data-testid="stSidebar"] .stRadio label,
+[data-testid="stSidebar"] .stRadio label p,
+[data-testid="stSidebar"] .stRadio label span,
+[data-testid="stSidebar"] .stRadio div[data-testid="stMarkdownContainer"] p {
+    font-family: 'Inter', sans-serif !important;
+    font-weight: 600 !important;
+    font-size: 0.97rem !important;
+    color: #CBD5E1 !important;
+    padding: 0.55rem 1rem !important;
+    border-radius: 10px !important;
+    transition: all 0.25s ease !important;
+    cursor: pointer !important;
+    letter-spacing: 0.01em !important;
+    line-height: 1.4 !important;
+}
+
+[data-testid="stSidebar"] .stRadio label:hover,
+[data-testid="stSidebar"] .stRadio label:hover p,
+[data-testid="stSidebar"] .stRadio label:hover span {
+    color: #FFFFFF !important;
+    background: rgba(102, 126, 234, 0.18) !important;
+}
+
+/* Active/selected radio label */
+[data-testid="stSidebar"] .stRadio label[data-checked="true"],
+[data-testid="stSidebar"] .stRadio label[aria-checked="true"],
+[data-testid="stSidebar"] .stRadio input:checked + label,
+[data-testid="stSidebar"] .stRadio input:checked ~ label {
+    color: #FFFFFF !important;
+    background: rgba(102, 126, 234, 0.2) !important;
+}
+
+/* Force all text inside sidebar to be light */
+[data-testid="stSidebar"] * {
+    color: #CBD5E1;
+}
+
+[data-testid="stSidebar"] p,
+[data-testid="stSidebar"] span,
+[data-testid="stSidebar"] div {
+    font-family: 'Inter', sans-serif !important;
+}
+
+/* ── Cards ─────────────────────────────────────────────────────── */
+.metric-card {
+    background: var(--card);
+    backdrop-filter: blur(20px);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    padding: 1.5rem;
+    text-align: center;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.metric-card::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, var(--primary), var(--secondary));
+}
+
+.metric-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 20px 40px rgba(102, 126, 234, 0.2);
+    border-color: var(--primary);
+}
+
+.metric-value {
+    font-size: 2.5rem;
+    font-weight: 800;
+    background: linear-gradient(135deg, var(--primary), var(--secondary));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    line-height: 1.1;
+}
+
+.metric-label {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    font-weight: 500;
+    margin-top: 0.5rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+/* ── Skill Tags ─────────────────────────────────────────────────── */
+.skill-tag {
+    display: inline-block;
+    padding: 0.35rem 0.85rem;
+    border-radius: 25px;
+    font-size: 0.78rem;
+    font-weight: 600;
+    margin: 0.2rem;
+    transition: all 0.25s ease;
+    cursor: default;
+}
+
+.skill-tag-match {
+    background: rgba(0, 204, 136, 0.15);
+    border: 1px solid rgba(0, 204, 136, 0.4);
+    color: #00CC88;
+}
+
+.skill-tag-missing {
+    background: rgba(255, 107, 107, 0.15);
+    border: 1px solid rgba(255, 107, 107, 0.4);
+    color: #FF6B6B;
+}
+
+.skill-tag-tech {
+    background: rgba(102, 126, 234, 0.15);
+    border: 1px solid rgba(102, 126, 234, 0.4);
+    color: var(--primary);
+}
+
+.skill-tag-soft {
+    background: rgba(118, 75, 162, 0.15);
+    border: 1px solid rgba(118, 75, 162, 0.4);
+    color: #9B8EC4;
+}
+
+.skill-tag:hover {
+    transform: scale(1.05);
+    opacity: 0.85;
+}
+
+/* ── Glow Button ──────────────────────────────────────────────── */
+.stButton > button {
+    background: linear-gradient(135deg, var(--primary), var(--secondary)) !important;
+    color: white !important;
+    border: none !important;
+    border-radius: 12px !important;
+    padding: 0.6rem 1.5rem !important;
+    font-weight: 600 !important;
+    font-family: 'Inter', sans-serif !important;
+    transition: all 0.3s ease !important;
+    box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4) !important;
+}
+
+.stButton > button:hover {
+    transform: translateY(-2px) !important;
+    box-shadow: 0 8px 25px rgba(102, 126, 234, 0.6) !important;
+}
+
+/* ── Progress Bars ─────────────────────────────────────────────── */
+.stProgress > div > div > div {
+    background: linear-gradient(90deg, var(--primary), var(--secondary)) !important;
+    border-radius: 10px !important;
+}
+
+/* ── Headers ───────────────────────────────────────────────────── */
+h1 {
+    background: linear-gradient(135deg, var(--primary), var(--secondary));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    font-weight: 800 !important;
+    font-family: 'Inter', sans-serif !important;
+}
+
+h2, h3 {
+    color: var(--text) !important;
+    font-family: 'Inter', sans-serif !important;
+    font-weight: 700 !important;
+}
+
+/* ── File Uploader ─────────────────────────────────────────────── */
+[data-testid="stFileUploadDropzone"] {
+    background: var(--card) !important;
+    border: 2px dashed var(--border) !important;
+    border-radius: 16px !important;
+    transition: all 0.3s ease !important;
+}
+
+[data-testid="stFileUploadDropzone"]:hover {
+    border-color: var(--primary) !important;
+    background: rgba(102, 126, 234, 0.05) !important;
+}
+
+/* ── Info/Success/Warning Boxes ────────────────────────────────── */
+.stAlert {
+    border-radius: 12px !important;
+    border: none !important;
+}
+
+/* ── Divider ──────────────────────────────────────────────────── */
+.divider {
+    height: 1px;
+    background: linear-gradient(90deg, transparent, var(--border), transparent);
+    margin: 1.5rem 0;
+}
+
+/* ── Section Title ────────────────────────────────────────────── */
+.section-title {
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: var(--text);
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid var(--primary);
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+/* ── Hero Banner ──────────────────────────────────────────────── */
+.hero-banner {
+    background: linear-gradient(135deg, rgba(102,126,234,0.15), rgba(118,75,162,0.15));
+    border: 1px solid var(--border);
+    border-radius: 20px;
+    padding: 2.5rem;
+    text-align: center;
+    backdrop-filter: blur(20px);
+    margin-bottom: 2rem;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-banner::before {
+    content: '';
+    position: absolute;
+    top: -50%; left: -50%;
+    width: 200%; height: 200%;
+    background: radial-gradient(circle, rgba(102,126,234,0.05) 0%, transparent 70%);
+    animation: pulse 4s ease-in-out infinite;
+}
+
+@keyframes pulse {
+    0%, 100% { transform: scale(1); opacity: 0.5; }
+    50% { transform: scale(1.1); opacity: 1; }
+}
+
+/* ── ATS Score Ring ─────────────────────────────────────────────── */
+.score-ring {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.8rem;
+    font-weight: 800;
+    margin: 0 auto;
+    position: relative;
+}
+
+/* ── Course Card ──────────────────────────────────────────────── */
+.course-card {
+    background: var(--card);
+    backdrop-filter: blur(20px);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    padding: 1.2rem;
+    margin-bottom: 1rem;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.course-card:hover {
+    transform: translateX(5px);
+    border-color: var(--primary);
+    box-shadow: -4px 0 20px rgba(102, 126, 234, 0.2);
+}
+
+.course-card::before {
+    content: '';
+    position: absolute;
+    left: 0; top: 0; bottom: 0;
+    width: 4px;
+    background: linear-gradient(180deg, var(--primary), var(--secondary));
+}
+
+/* ── Data Tables ──────────────────────────────────────────────── */
+.stDataFrame {
+    border: 1px solid var(--border) !important;
+    border-radius: 12px !important;
+}
+
+/* ── Expander ─────────────────────────────────────────────────── */
+.streamlit-expanderHeader {
+    background: var(--card) !important;
+    border-radius: 10px !important;
+    color: var(--text) !important;
+    font-weight: 600 !important;
+}
+
+/* ── Tabs ─────────────────────────────────────────────────────── */
+.stTabs [data-baseweb="tab"] {
+    color: var(--text-muted) !important;
+    font-weight: 500 !important;
+}
+
+.stTabs [aria-selected="true"] {
+    color: var(--primary) !important;
+    border-bottom-color: var(--primary) !important;
+}
+
+/* ── Animations ───────────────────────────────────────────────── */
+@keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slideIn {
+    from { opacity: 0; transform: translateX(-20px); }
+    to { opacity: 1; transform: translateX(0); }
+}
+
+.fade-in {
+    animation: fadeInUp 0.5s ease forwards;
+}
+
+.slide-in {
+    animation: slideIn 0.4s ease forwards;
+}
+
+/* ── Spinner ──────────────────────────────────────────────────── */
+.stSpinner > div {
+    border-color: var(--primary) transparent transparent transparent !important;
+}
+
+/* ── Mobile Responsive ────────────────────────────────────────── */
+@media (max-width: 768px) {
+    .hero-banner {
+        padding: 1.5rem;
+    }
+    .metric-value {
+        font-size: 1.8rem;
+    }
+}

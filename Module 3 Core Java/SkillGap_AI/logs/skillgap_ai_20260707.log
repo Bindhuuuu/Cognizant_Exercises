@@ -1,0 +1,6 @@
+[2026-07-07 23:12:48] [INFO] [skill_database] Loaded skills for 11 job roles
+[2026-07-07 23:12:48] [INFO] [model_trainer] Training job role prediction model...
+[2026-07-07 23:12:48] [INFO] [model_trainer] Feature space: 154 unique skills across 11 roles
+[2026-07-07 23:12:48] [INFO] [model_trainer] Generated 550 training samples
+[2026-07-07 23:12:49] [INFO] [model_trainer] Model accuracy: 0.9909 (99.1%)
+[2026-07-07 23:12:49] [INFO] [model_trainer] Model saved to C:\Users\msree\OneDrive\Documents\Local Community Event Portal\Module 3 Core Java\SkillGap_AI\models\job_role_model.pkl

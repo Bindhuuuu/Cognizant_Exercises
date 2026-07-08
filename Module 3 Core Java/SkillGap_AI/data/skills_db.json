@@ -1,0 +1,46 @@
+{
+  "Data Analyst": {
+    "technical": ["python", "sql", "excel", "tableau", "power bi", "pandas", "numpy", "matplotlib", "seaborn", "statistics", "data visualization", "data cleaning", "etl", "r", "sas", "google analytics", "looker", "data modeling", "a/b testing", "regression analysis"],
+    "soft": ["analytical thinking", "communication", "problem solving", "attention to detail", "critical thinking", "storytelling", "collaboration", "presentation"]
+  },
+  "Data Scientist": {
+    "technical": ["python", "r", "machine learning", "deep learning", "tensorflow", "pytorch", "scikit-learn", "pandas", "numpy", "statistics", "sql", "spark", "hadoop", "natural language processing", "computer vision", "feature engineering", "model deployment", "jupyter", "matplotlib", "seaborn", "xgboost", "keras"],
+    "soft": ["analytical thinking", "research", "problem solving", "communication", "curiosity", "storytelling", "critical thinking", "collaboration"]
+  },
+  "Machine Learning Engineer": {
+    "technical": ["python", "tensorflow", "pytorch", "scikit-learn", "machine learning", "deep learning", "mlops", "docker", "kubernetes", "aws", "gcp", "azure", "model deployment", "api development", "spark", "airflow", "feature engineering", "ci/cd", "rest api", "numpy", "pandas", "keras", "xgboost", "model optimization"],
+    "soft": ["problem solving", "systems thinking", "collaboration", "communication", "attention to detail", "innovation"]
+  },
+  "Software Engineer": {
+    "technical": ["python", "java", "c++", "javascript", "data structures", "algorithms", "oop", "design patterns", "git", "sql", "rest api", "unit testing", "agile", "linux", "docker", "ci/cd", "microservices", "system design", "debugging", "code review"],
+    "soft": ["problem solving", "teamwork", "communication", "time management", "attention to detail", "adaptability", "collaboration"]
+  },
+  "Full Stack Developer": {
+    "technical": ["javascript", "typescript", "react", "node.js", "express", "html", "css", "sql", "mongodb", "rest api", "git", "docker", "aws", "python", "graphql", "redis", "webpack", "testing", "agile", "microservices"],
+    "soft": ["problem solving", "communication", "teamwork", "adaptability", "time management", "creativity"]
+  },
+  "Frontend Developer": {
+    "technical": ["javascript", "typescript", "react", "vue.js", "angular", "html", "css", "sass", "webpack", "git", "responsive design", "rest api", "testing", "performance optimization", "accessibility", "figma", "redux", "graphql", "next.js", "tailwind css"],
+    "soft": ["creativity", "attention to detail", "communication", "teamwork", "problem solving", "user empathy"]
+  },
+  "Backend Developer": {
+    "technical": ["python", "java", "node.js", "go", "sql", "nosql", "rest api", "microservices", "docker", "kubernetes", "redis", "message queues", "postgresql", "mongodb", "authentication", "ci/cd", "linux", "git", "system design", "caching"],
+    "soft": ["problem solving", "analytical thinking", "communication", "reliability", "teamwork", "attention to detail"]
+  },
+  "DevOps Engineer": {
+    "technical": ["docker", "kubernetes", "ci/cd", "jenkins", "github actions", "terraform", "ansible", "aws", "gcp", "azure", "linux", "bash", "python", "monitoring", "grafana", "prometheus", "elasticsearch", "git", "nginx", "helm"],
+    "soft": ["problem solving", "collaboration", "communication", "reliability", "attention to detail", "adaptability"]
+  },
+  "Cloud Engineer": {
+    "technical": ["aws", "azure", "gcp", "terraform", "kubernetes", "docker", "networking", "security", "iam", "serverless", "databases", "ci/cd", "python", "linux", "monitoring", "cost optimization", "load balancing", "storage", "vpn", "cloudformation"],
+    "soft": ["problem solving", "communication", "analytical thinking", "reliability", "collaboration", "adaptability"]
+  },
+  "AI Engineer": {
+    "technical": ["python", "machine learning", "deep learning", "tensorflow", "pytorch", "llm", "transformers", "hugging face", "nlp", "computer vision", "mlops", "api development", "docker", "kubernetes", "model deployment", "openai api", "langchain", "vector databases", "prompt engineering", "rag"],
+    "soft": ["innovation", "problem solving", "research", "communication", "analytical thinking", "curiosity", "collaboration"]
+  },
+  "Cybersecurity Analyst": {
+    "technical": ["network security", "penetration testing", "siem", "vulnerability assessment", "python", "linux", "firewalls", "encryption", "incident response", "threat analysis", "ethical hacking", "splunk", "wireshark", "nmap", "risk assessment", "compliance", "owasp", "kali linux", "malware analysis", "cloud security"],
+    "soft": ["analytical thinking", "problem solving", "communication", "attention to detail", "integrity", "adaptability", "critical thinking"]
+  }
+}
