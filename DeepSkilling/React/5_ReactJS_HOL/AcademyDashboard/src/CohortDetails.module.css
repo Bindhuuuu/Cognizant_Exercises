@@ -1,0 +1,44 @@
+/* ============================================================
+   CohortDetails.module.css
+   CSS Module for the CohortDetails component.
+   Styles are scoped locally to the component using CSS Modules.
+   ============================================================ */
+
+/* Box style applied to each cohort card container */
+.box {
+  width: 300px;
+  display: inline-block;
+  margin: 10px;
+  padding: 10px 20px;
+  border: 1px solid black;
+  border-radius: 10px;
+  vertical-align: top;        /* Align cards to the top when side-by-side */
+  background-color: #ffffff;  /* White card background */
+  box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.08); /* Subtle shadow for depth */
+}
+
+/* Style for definition term (dt) — the label fields inside the card */
+dt {
+  font-weight: 500;
+  color: #333333;
+  margin-top: 8px;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+/* Style for definition description (dd) — the value fields inside the card */
+dd {
+  margin: 2px 0 6px 0;
+  color: #555555;
+  font-size: 0.95rem;
+}
+
+/* Style for h3 heading inside the card (cohort name) */
+.box h3 {
+  margin: 8px 0 12px 0;
+  font-size: 1.05rem;
+  font-weight: 700;
+  border-bottom: 1px solid #eeeeee;
+  padding-bottom: 8px;
+}
